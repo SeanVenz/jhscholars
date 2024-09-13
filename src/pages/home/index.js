@@ -15,6 +15,7 @@ function Home() {
         <img src={jhbanner} alt="JH Logo" ></img>
       </div>
       <p>Empower. Play. Earn. Grow.</p>
+      <p>Join the ultimate guild where scholars rise to the top through community, effort, and rewards.</p>
       <div className="navigation">
         <Link to="/about">
           <img src={aboutus} alt="About Us" />

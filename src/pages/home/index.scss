@@ -1,5 +1,5 @@
 .home {
-  background-image: url("../../images/bg.png");
+  background-image: url("../../images/bgpt1.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -12,14 +12,15 @@
   p {
     text-align: center;
     font-size: 2rem;
+    color: white;
   }
 
   .logo-holder {
     width: 100%;
     img {
-      height: 90%;
+      height: 78%;
       width: 100%;
-      transition: transform 0.3s ease-in-out;
+      opacity: 0.8;
     }
   }
 
