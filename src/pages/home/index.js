@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import home from "../../images/home.png";
 import aboutus from "../../images/aboutus.png";
 import joinus from "../../images/joinus.png";
 import scholars from "../../images/scholars.png";
-import jhlogo from "../../images/jhlogo.jpg";
 import jhbanner from '../../images/jhbanner.png'
 import "./index.scss";
 

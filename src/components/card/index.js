@@ -41,6 +41,7 @@ function MyCard() {
       <a
         href="https://app.axieinfinity.com/profile/0x2ea79d25502280b9fa4809fa424c8a8501a454b6/axies/"
         target="_blank"
+        rel="noreferrer"
       >
         <button>Axie</button>
       </a>
