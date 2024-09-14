@@ -1,29 +1,48 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import aboutus from "../../images/aboutus.png";
-import joinus from "../../images/joinus.png";
-import scholars from "../../images/scholars.png";
-import jhbanner from '../../images/jhbanner.png'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import jhbanner from "../../images/jhbanner.png";
+import aboutussneakpeek from "../../images/aboutussneakpeek.png";
+import schlarssneak from "../../images/scholarssneak.png";
 import "./index.scss";
+import { homeCardDetails } from "../../data/scholars";
 
 function Home() {
+  const [zoomedImage, setZoomedImage] = useState(null);
+  const navigate = useNavigate();
+
+  const handleImageClick = (link, index) => {
+    setZoomedImage(index);
+    setTimeout(() => {
+      navigate(link);
+    }, 1000); // Match this with your zoom duration
+  };
+
   return (
     <div className="home">
       <div className="logo-holder">
-        <img src={jhbanner} alt="JH Logo" ></img>
+        <img src={jhbanner} alt="JH Logo" />
       </div>
       <p>Empower. Play. Earn. Grow.</p>
-      <p>Join the ultimate guild where scholars rise to the top through community, effort, and rewards.</p>
+      <p>
+        Join the ultimate guild where scholars rise to the top through
+        community, effort, and rewards.
+      </p>
       <div className="navigation">
-        <Link to="/about">
-          <img src={aboutus} alt="About Us" />
-        </Link>
-        <Link to="/scholars">
-          <img src={scholars} alt="Scholars" />
-        </Link>
-        <Link to="/join">
-          <img src={joinus} alt="Join Us" className="join-us" />
-        </Link>
+        {homeCardDetails.map((detail, index) => (
+          <div className="card" key={index}>
+              <img
+                src={detail.sneak}
+                alt="sneak"
+                className={`sneak ${zoomedImage === index ? "zoom" : ""}`}
+              />
+              <img
+                src={detail.image}
+                alt={detail.alt}
+                className={`card-image-link ${zoomedImage === index ? "hidden" : ""}`}
+                onClick={() => handleImageClick(detail.link, index)}
+              />
+          </div>
+        ))}
       </div>
     </div>
   );

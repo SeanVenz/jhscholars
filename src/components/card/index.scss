@@ -35,8 +35,21 @@
       align-items: center;
 
       img{
-        width: 70%;
-        height: 70%;
+        width: 90%;
+        height: 90%;
+        animation: move-up-down 3s ease-in-out infinite;
+      }
+    }
+
+    @keyframes move-up-down {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
       }
     }
 
