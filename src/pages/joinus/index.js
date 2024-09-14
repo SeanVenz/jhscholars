@@ -1,9 +1,11 @@
 import React from "react";
 import ScholarForm from "../../components/form";
+import Navbar from "../../components/navbar";
 
 function JoinUs() {
   return (
     <>
+    <Navbar></Navbar>
       <h4>Ready to Join the Ranks?</h4>
 
       <h5>Sign Up:</h5>
