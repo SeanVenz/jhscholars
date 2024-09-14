@@ -1,8 +1,8 @@
-import scholar1 from '../images/scholar_1.png'
-import scholar2 from '../images/scholar_2.png'
-import scholar3 from '../images/scholar_3.png'
-import scholar4 from '../images/scholar_4.png'
-import scholar5 from '../images/scholar_5.png'
+import scholar1 from '../images/botchog1.png'
+import scholar2 from '../images/botchog2.png'
+import scholar3 from '../images/botchog3.png'
+import scholar4 from '../images/botchog4.png'
+import scholar5 from '../images/botchog5.png'
 
 import aboutus from '../images/aboutus.png'
 import joinus from '../images/joinus.png'

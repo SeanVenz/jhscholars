@@ -24,12 +24,12 @@ function ScholarForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setErrorMessage(""); // Reset the error message before new submission
+    setErrorMessage(""); 
 
     setTimeout(() => {
       try {
         sendEmail(formData.discordId, formData.email, formData.message);
-        setIsSubmitted(true); // Set submission status to true on success
+        setIsSubmitted(true);
       } catch (error) {
         setErrorMessage("Error occurred while sending email.");
         console.error("Error sending email:", error);
@@ -41,7 +41,7 @@ function ScholarForm() {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <p className="title" style={{ margin: "0px" }}>Register</p>
+      <h4 className="title" style={{ margin: "0px" }}>Register</h4>
       <p className="message">Signup now and join our ranks!</p>
 
       <label>
