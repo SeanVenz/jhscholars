@@ -22,15 +22,15 @@ const topScholars = [
 
 const rewards = [
     {place: "1st", reward: 100 },
-    {place: "1st", reward: 75 },
-    {place: "1st", reward: 50 },
-    {place: "1st", reward: 30 },
-    {place: "1st", reward: 25 },
-    {place: "1st", reward: 24 },
-    {place: "1st", reward: 23 },
-    {place: "1st", reward: 22 },
-    {place: "1st", reward: 21 },
-    {place: "1st", reward: 20 },
+    {place: "2nd", reward: 75 },
+    {place: "3rd", reward: 50 },
+    {place: "4th", reward: 30 },
+    {place: "5th", reward: 25 },
+    {place: "6th", reward: 24 },
+    {place: "7th", reward: 23 },
+    {place: "8th", reward: 22 },
+    {place: "9th", reward: 21 },
+    {place: "10th", reward: 20 },
 ];
 
 const homeCardDetails = [
