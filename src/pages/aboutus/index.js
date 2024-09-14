@@ -4,6 +4,7 @@ import { rewards } from "../../data/scholars";
 import Navbar from "../../components/navbar";
 import "./index.scss";
 import RewardList from "../../components/reward";
+import Button from "../../components/button";
 
 function AboutUs() {
   return (
@@ -37,8 +38,7 @@ function AboutUs() {
             </ul>
           ))}
         </div>
-
-        <Link to="/scholars">Check out The Top Scholars</Link>
+        <Button link="/scholars" text="TOP SCHOLARS"></Button>
       </div>
     </div>
   );

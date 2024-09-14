@@ -21,7 +21,7 @@ function Scholars() {
           </p>
           <p>Browse our axies here!</p>
           <div className="btn">
-          <Button></Button>
+            <Button text="A X I E S"></Button>
           </div>
         </div>
       </div>
