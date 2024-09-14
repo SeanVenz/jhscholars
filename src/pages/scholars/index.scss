@@ -1,14 +1,37 @@
-.scholars{
-    padding-top: 5%;
+.scholars {
+  padding-top: 5%;
+  padding-bottom: 1%;
+  h2 {
+    text-align: center;
+    color: #0e2557;
+    font-family: "MainFont";
+    font-size: 4rem;
+    letter-spacing: 5px;
+    padding: 0.5%;
+  }
 
-    h2{
-        text-align: center;
-    }
+  h4 {
+    text-align: center;
+    color: #0e2557;
+    font-family: "MainFont";
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    padding: 0.5%;
+    padding-top: 2%;
+  }
 
-    .info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0e2557;
+    font-family: "SecondaryFont";
+    letter-spacing: 2px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
