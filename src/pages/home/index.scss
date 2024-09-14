@@ -1,5 +1,5 @@
 .home {
-  background-image: url("../../images/bgpt1.png");
+  // background-image: url("../../images/bgpt1.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -7,10 +7,20 @@
   display: flex;
   flex-direction: column;
 
+  h1{
+    text-align:  center;
+    color: #0E2557;
+    font-family: 'MainFont';
+    font-size: 4rem;
+    letter-spacing: 5px;
+  }
+
   p {
     text-align: center;
-    font-size: 2rem;
-    color: white;
+    font-size: 1.5rem;
+    color: #0E2557;
+    font-family: 'SecondaryFont';
+    letter-spacing: 2px;
   }
 
   .logo-holder {
@@ -18,7 +28,6 @@
     img {
       height: 78%;
       width: 100%;
-      opacity: 0.8;
     }
   }
 

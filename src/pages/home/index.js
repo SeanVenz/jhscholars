@@ -22,7 +22,7 @@ function Home() {
       <div className="logo-holder">
         <img src={jhbanner} alt="JH Logo" />
       </div>
-      <p>Empower. Play. Earn. Grow.</p>
+      <h1 style={{margin: "0px"}}>Empower. Play. Earn. Grow.</h1>
       <p>
         Join the ultimate guild where scholars rise to the top through
         community, effort, and rewards.
