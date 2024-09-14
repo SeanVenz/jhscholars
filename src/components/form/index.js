@@ -9,6 +9,10 @@ function ScholarForm() {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false); // New state for submission status
+  const [errorMessage, setErrorMessage] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -19,56 +23,84 @@ function ScholarForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setErrorMessage(""); // Reset the error message before new submission
 
-    try {
-      sendEmail(formData.discordId, formData.email, formData.message);
-    } catch (error) {}
+    setTimeout(() => {
+      try {
+        sendEmail(formData.discordId, formData.email, formData.message);
+        setIsSubmitted(true); // Set submission status to true on success
+      } catch (error) {
+        setErrorMessage("Error occurred while sending email.");
+        console.error("Error sending email:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    }, 2000);
   };
 
   return (
-    <>
-      <form className="form" onSubmit={handleSubmit}>
-        <p className="title">Register</p>
-        <p className="message">Signup now and join our ranks!</p>
+    <form className="form" onSubmit={handleSubmit}>
+      <p className="title" style={{ margin: "0px" }}>Register</p>
+      <p className="message">Signup now and join our ranks!</p>
 
-        <label>
-          <input
-            className="input"
-            type="text"
-            name="discordId"
-            value={formData.discordId}
-            onChange={handleChange}
-            required
-          />
-          <span>Discord ID</span>
-        </label>
+      <label>
+        <input
+          className="input"
+          type="text"
+          name="discordId"
+          value={formData.discordId}
+          onChange={handleChange}
+          required
+          disabled={isLoading || isSubmitted}
+        />
+        <span>Discord ID</span>
+      </label>
 
-        <label>
-          <input
-            className="input"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <span>Email</span>
-        </label>
+      <label>
+        <input
+          className="input"
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          disabled={isLoading || isSubmitted}
+        />
+        <span>Email</span>
+      </label>
 
-        <label>
-          <textarea
-            className="textarea"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-          <span>Message</span>
-        </label>
+      <label>
+        <textarea
+          className="textarea"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          disabled={isLoading || isSubmitted}
+        />
+        <span>Message</span>
+      </label>
 
-        <button className="submit">Submit</button>
-      </form>
-    </>
+      {/* Display error message if there is one */}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
+
+      <button
+        className={`submit ${isLoading ? "loading" : ""} ${
+          isSubmitted ? "submitted" : ""
+        }`}
+        type="submit"
+        disabled={isLoading || isSubmitted}
+      >
+        {isLoading ? (
+          <div className="spinner"></div>
+        ) : isSubmitted ? (
+          "Submitted"
+        ) : (
+          "Submit"
+        )}
+      </button>
+    </form>
   );
 }
 
