@@ -11,6 +11,11 @@ function Home() {
   const navigate = useNavigate();
   const [vantaEffect, setVantaEffect] = useState(null);
   const vantaRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
 
   useEffect(() => {
     if (!vantaEffect && vantaRef.current) {
@@ -55,10 +60,12 @@ function Home() {
         {homeCardDetails.map((detail, index) => (
           <ul>
             <div className="card" key={index}>
+            {isLoading && <div className="spinner"></div>}
               <img
                 src={detail.sneak}
                 alt="sneak peek"
                 className={`sneak ${zoomedImage === index ? "zoom" : ""}`}
+                onLoad={handleImageLoad}
               />
               <img
                 src={detail.image}

@@ -21,9 +21,9 @@ function App() {
 
   return (
     <>
-    {isLoading ? (
+    {/* {isLoading ? (
       <Loader/>
-    ) : (
+    ) : ( */}
       <Router>
         <Routes>
           <Route path='/' element={<Home/>}/>
@@ -32,7 +32,7 @@ function App() {
           <Route path='/join' element={<JoinUs/>}/>
         </Routes>
       </Router>
-    )}
+    {/* )} */}
     </>
   );
 }
