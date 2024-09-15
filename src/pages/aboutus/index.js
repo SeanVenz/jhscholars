@@ -40,7 +40,7 @@ function AboutUs() {
     <div className="about-us" ref={vantaRef}>
       <Navbar />
       <div className="content">
-        <h3>Welcome to the JH Community Guild!</h3>
+        <h3 style={{margin: "0px"}}>Welcome to the JH Community Guild!</h3>
 
         <div className="text">
           <p>
