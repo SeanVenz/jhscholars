@@ -40,7 +40,6 @@ function JoinUs() {
       <div className="join" ref={vantaRef}>
         <Navbar></Navbar>
         <div className="content">
-          <div className="traveling-dot"></div>
           <h2 style={{ margin: "0px" }}>Ready to Join the Ranks?</h2>
 
           <div className="info">
@@ -52,7 +51,7 @@ function JoinUs() {
               <h4>Start Competing:</h4>
 
               <p>
-                Gain Guild Points by playing in our weekly tournaments <br />{" "}
+                Gain Guild Points by playing in our weekly tournaments
                 and events.
               </p>
 
@@ -60,7 +59,7 @@ function JoinUs() {
 
               <p>
                 The more points you earn, the more rewards you
-                <br /> can unlock!
+                can unlock!
               </p>
             </div>
             <div className="right-info">
