@@ -56,28 +56,6 @@ function AboutUs() {
             community.
           </p>
         </div>
-
-        <h4>Season Rewards & Incentives</h4>
-        <div className="text">
-          <p>
-            We value the hard work of our scholars! The size of our season
-            rewards is tied to the size of our community. When we hit key
-            milestones like 60 members, our rewards grow even bigger! Check out
-            the prizes for Season 5:
-          </p>
-        </div>
-        <div className="rewards">
-          {rewards.map((reward, index) => (
-            <ul key={index}>
-              <RewardList
-                place={reward.place}
-                reward={reward.reward}
-              ></RewardList>
-            </ul>
-          ))}
-        </div>
-        <Button link="/scholars" text="SCHOLARS"></Button>
-
         <h4 style={{ margin: "0px", paddingTop: "2%" }}>Meet the Team</h4>
         <div className="team">
           <ul>
@@ -102,6 +80,27 @@ function AboutUs() {
             </div>
           </ul>
         </div>
+
+        <h4>Season Rewards & Incentives</h4>
+        <div className="text">
+          <p>
+            We value the hard work of our scholars! The size of our season
+            rewards is tied to the size of our community. When we hit key
+            milestones like 60 members, our rewards grow even bigger! Check out
+            the prizes for Season 5:
+          </p>
+        </div>
+        <div className="rewards">
+          {rewards.map((reward, index) => (
+            <ul key={index}>
+              <RewardList
+                place={reward.place}
+                reward={reward.reward}
+              ></RewardList>
+            </ul>
+          ))}
+        </div>
+        <Button link="/scholars" text="SCHOLARS"></Button>
       </div>
     </div>
   );
