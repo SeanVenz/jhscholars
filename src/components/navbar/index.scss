@@ -1,49 +1,122 @@
-/* Navbar.scss */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #193B61;
   color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 
   .navbar-logo {
-    width: 20%;
-    img{
-        height: auto;
-        width: 18%;
-        border-radius: 50%;
+    img {
+      height: auto;
+      width: 95px;
+      border-radius: 50%;
     }
   }
-  
+
   .navbar-links {
     list-style: none;
     display: flex;
     gap: 1rem;
-    width: 17%;
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    .active {
+      background-color: #ffcc00;
+      color: #000;
+      border-radius: 5px;
+    }
   }
-  
-  .navbar-links li {
-    margin: 0;
+
+  .navbar-toggle {
+    display: none;
   }
-  
-  .navbar-links a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
+
+  @media (max-width: 768px) {
+    .navbar-links {
+      position: fixed;
+      top: 50px;
+      right: 0;
+      background-color: #193B61;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-links.open {
+      transform: translateX(0);
+    }
+
+    .navbar-toggle {
+      display: block;
+      cursor: pointer;
+    }
+
+    .burger {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    .navbar-toggle.open .burger:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .navbar-toggle.open .burger:nth-child(2) {
+      opacity: 0;
+    }
+
+    .navbar-toggle.open .burger:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
   }
-  
-  .navbar-links a:hover {
-    background-color: #555;
-    border-radius: 5px;
-  }
-  
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1303px){
+  .navbar {
+    .navbar-logo {
+      img {
+        width: 80px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .navbar {
+    .navbar-logo {
+      img {
+        width: 70px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

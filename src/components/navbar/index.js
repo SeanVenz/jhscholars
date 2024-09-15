@@ -1,25 +1,45 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom"; // Use NavLink instead of Link
 import "./index.scss";
 import jhLogo from "../../images/jhlogo.jpg";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">
+        <NavLink to="/" exact>
           <img src={jhLogo} alt="Brand" />
-        </Link>
+        </NavLink>
       </div>
-      <ul className="navbar-links">
+      <div
+        className={`navbar-toggle ${isOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
+        <div className="burger"></div>
+        <div className="burger"></div>
+        <div className="burger"></div>
+      </div>
+      <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink to="/about" activeClassName="active">
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to="/scholars">Scholars</Link>
+          <NavLink to="/scholars" activeClassName="active">
+            Scholars
+          </NavLink>
         </li>
         <li>
-          <Link to="/join">Join</Link>
+          <NavLink to="/join" activeClassName="active">
+            Join
+          </NavLink>
         </li>
       </ul>
     </nav>

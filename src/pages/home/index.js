@@ -29,7 +29,7 @@ function Home() {
     return () => {
       if (vantaEffect) {
         vantaEffect.destroy();
-        setVantaEffect(null); // Clear effect reference
+        setVantaEffect(null); 
       }
     };
   }, [vantaEffect]);
@@ -38,7 +38,7 @@ function Home() {
     setZoomedImage(index);
     setTimeout(() => {
       navigate(link);
-    }, 1000); // Match this with your zoom duration
+    }, 1000); 
   };
 
   return (

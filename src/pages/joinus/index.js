@@ -31,7 +31,7 @@ function JoinUs() {
     return () => {
       if (vantaEffect) {
         vantaEffect.destroy();
-        setVantaEffect(null); // Clear effect reference
+        setVantaEffect(null);
       }
     };
   }, [vantaEffect]);
