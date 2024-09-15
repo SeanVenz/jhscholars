@@ -156,10 +156,19 @@
       }
     }
 
+    .logo-holder{
+      height: 80px;
+      img{
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
     h1{
       padding-top: 3%;
       padding-left: 2%;
       padding-right: 2%;
+      font-size: 2rem;
     }
 
     p{
