@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import { rewards } from "../../data/scholars";
 import Navbar from "../../components/navbar";
 import "./index.scss";
@@ -9,7 +8,6 @@ import GLOBE from "vanta/dist/vanta.globe.min.js";
 import * as THREE from "three";
 
 function AboutUs() {
-  const navigate = useNavigate();
   const [vantaEffect, setVantaEffect] = useState(null);
   const vantaRef = useRef(null);
 

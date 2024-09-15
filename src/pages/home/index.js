@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import jhbanner from "../../images/jhbanner.png";
-import aboutussneakpeek from "../../images/aboutussneakpeek.png";
-import schlarssneak from "../../images/scholarssneak.png";
 import "./index.scss";
 import { homeCardDetails } from "../../data/scholars";
 import HALO from "vanta/dist/vanta.halo.min.js";

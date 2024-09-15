@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ScholarForm from "../../components/form";
 import Navbar from "../../components/navbar";
 import "./index.scss";
+import RINGS from "vanta/dist/vanta.rings.min.js";
+import * as THREE from "three";
 
 function JoinUs() {
+  const [vantaEffect, setVantaEffect] = useState(null);
+  const vantaRef = useRef(null);
+
+  useEffect(() => {
+    if (!vantaEffect && vantaRef.current) {
+      setVantaEffect(
+        RINGS({
+          el: vantaRef.current,
+          THREE: THREE,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          backgroundColor: 0x0,
+          points: 5.0,
+        })
+      );
+    }
+    return () => {
+      if (vantaEffect) {
+        vantaEffect.destroy();
+        setVantaEffect(null); // Clear effect reference
+      }
+    };
+  }, [vantaEffect]);
   return (
     <>
       <div className="join">

@@ -3,12 +3,10 @@ import MyCard from "../../components/card";
 import Navbar from "../../components/navbar";
 import Button from "../../components/button";
 import "./index.scss";
-import { useNavigate } from "react-router-dom";
 import RINGS from "vanta/dist/vanta.rings.min.js";
 import * as THREE from "three";
 
 function Scholars() {
-  const navigate = useNavigate();
   const [vantaEffect, setVantaEffect] = useState(null);
   const vantaRef = useRef(null);
 
