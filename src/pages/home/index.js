@@ -23,10 +23,6 @@ function Home() {
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          backgroundColor: 0x0,
-          points: 5.0,
         })
       );
     }
@@ -57,6 +53,7 @@ function Home() {
       </p>
       <div className="navigation">
         {homeCardDetails.map((detail, index) => (
+          <ul>
           <div className="card" key={index}>
             <img
               src={detail.sneak}
@@ -72,6 +69,7 @@ function Home() {
               onClick={() => handleImageClick(detail.link, index)}
             />
           </div>
+          </ul>
         ))}
       </div>
     </div>

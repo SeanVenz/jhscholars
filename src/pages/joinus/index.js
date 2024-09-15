@@ -22,9 +22,9 @@ function JoinUs() {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          backgroundColor: 0x0,
-          points: 5.0,
-          spacing: 10
+          color1: 0x248484,
+          color2: 0x1aa7f0,
+          speed: 3,
         })
       );
     }
