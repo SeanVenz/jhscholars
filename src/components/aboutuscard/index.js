@@ -4,8 +4,8 @@ import jhlogo from "../../images/jhlogo.jpg";
 
 function AboutUsCard({ name, role, img }) {
   return (
-    <div class="aboutus_card">
-      <div class="card_load">
+    <div className="aboutus_card">
+      <div className="card_load">
         <img src={img} alt={name} />
       </div>
       <div className="info">
