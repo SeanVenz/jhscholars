@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import { rewards, team } from "../../data/scholars";
+import { rewards } from "../../data/scholars";
 import Navbar from "../../components/navbar";
 import "./index.scss";
 import RewardList from "../../components/reward";
 import Button from "../../components/button";
 import GLOBE from "vanta/dist/vanta.globe.min.js";
 import * as THREE from "three";
-import AboutUsCard from "../../components/aboutuscard";
+import squanchy from "../../images/squanchy.png";
+import yarrk from "../../images/yarrk.png";
+import rosamiya from "../../images/rosamiya.png";
+import jackhowdy from "../../images/jackhowdy.png";
 
 function AboutUs() {
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -75,17 +78,29 @@ function AboutUs() {
         </div>
         <Button link="/scholars" text="SCHOLARS"></Button>
 
-        <h4 style={{margin: "0px", paddingTop: "2%"}}>Meet the Team</h4>
+        <h4 style={{ margin: "0px", paddingTop: "2%" }}>Meet the Team</h4>
         <div className="team">
-          {team.map((indiv, index) => (
-            <ul key={index}>
-              <AboutUsCard
-                name={indiv.name}
-                role={indiv.role}
-                img={indiv.img}
-              />
-            </ul>
-          ))}
+          <ul>
+            <div className="img-container special">
+              <img src={jackhowdy} alt="Jackhowdy" />
+            </div>
+          </ul>
+
+          <ul>
+            <div className="img-container special">
+              <img src={yarrk} alt="Yarrk" />
+            </div>
+          </ul>
+          <ul>
+            <div className="img-container special">
+              <img src={squanchy} alt="Squanchy" />\
+            </div>
+          </ul>
+          <ul>
+            <div className="img-container special">
+              <img src={rosamiya} alt="Rosa Miya" />
+            </div>
+          </ul>
         </div>
       </div>
     </div>
