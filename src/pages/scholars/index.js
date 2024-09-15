@@ -45,7 +45,7 @@ function Scholars() {
         <div className="info">
           <h4 style={{ margin: "0px" }}>Need an axie? We've got you covered</h4>
           <p>
-            Our scholars enjoy access to exclusive Axie rental vouchers! <br />{" "}
+            Our scholars enjoy access to exclusive Axie rental vouchers!
             Unlock your potential by renting the best Axies in the game and
             climb the leaderboards with ease!
           </p>

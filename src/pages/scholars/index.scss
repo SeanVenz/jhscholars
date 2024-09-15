@@ -1,5 +1,5 @@
 .scholars {
-  padding-top: 6%;
+  padding-top: 7%;
   height: 100%;
   h2 {
     text-align: center;
@@ -34,5 +34,26 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 1%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1303px) {
+  .scholars{
+    padding-top: 10%;
+  }
+  p{
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .scholars{
+    padding-top: 20%;
+
+    p{
+      padding-left: 3%;
+      padding-right: 3%;
+    }
   }
 }
