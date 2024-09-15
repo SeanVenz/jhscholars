@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { rewards } from "../../data/scholars";
+import { rewards, team } from "../../data/scholars";
 import Navbar from "../../components/navbar";
 import "./index.scss";
 import RewardList from "../../components/reward";
 import Button from "../../components/button";
 import GLOBE from "vanta/dist/vanta.globe.min.js";
 import * as THREE from "three";
+import AboutUsCard from "../../components/aboutuscard";
 
 function AboutUs() {
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -73,6 +74,19 @@ function AboutUs() {
           ))}
         </div>
         <Button link="/scholars" text="SCHOLARS"></Button>
+
+        <h4 style={{margin: "0px", paddingTop: "2%"}}>Meet the Team</h4>
+        <div className="team">
+          {team.map((indiv, index) => (
+            <ul key={index}>
+              <AboutUsCard
+                name={indiv.name}
+                role={indiv.role}
+                img={indiv.img}
+              />
+            </ul>
+          ))}
+        </div>
       </div>
     </div>
   );

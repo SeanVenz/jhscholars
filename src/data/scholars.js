@@ -18,6 +18,11 @@ import bg3 from "../images/bg3.jpg";
 import bg4 from "../images/bg4.jpg";
 import bg5 from "../images/bg5.jpg";
 
+import jackhowdy from "../images/jackhowdy.png";
+import yarrk from "../images/yarrk.jpg";
+import rosamiya from "../images/rosamiya.png";
+import squanchy from "../images/squanchy.jpg";
+
 const topScholars = [
   {
     name: "Yurii5",
@@ -85,4 +90,11 @@ const homeCardDetails = [
   { image: joinus, link: "/join", alt: "Join", sneak: joinussneak },
 ];
 
-export { topScholars, rewards, homeCardDetails };
+const team = [
+  { name: "Jackhowdy", role: "Owner", img: jackhowdy },
+  { name: "Yarrk", role: "Owner", img: yarrk },
+  { name: "Squanchy", role: "Community Manager", img: squanchy },
+  { name: "Rosa Miya", role: "Community Manager", img: rosamiya },
+];
+
+export { topScholars, rewards, homeCardDetails, team };

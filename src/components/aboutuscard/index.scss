@@ -1,0 +1,75 @@
+/* From Uiverse.io by mrhyddenn */
+.aboutus_card {
+  width: 250px;
+  height: 250px;
+  background: #ffff;
+  box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2);
+  padding: 12px 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+  background: -webkit-linear-gradient(0deg, #ffffff 0%, #9cd0f3 100%);
+  background: linear-gradient(0deg, #ffffff 0%, #9cd0f3 100%);
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  p {
+    color: black;
+    margin: 0;
+  }
+
+  .card_load {
+    width: 100px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 40%;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 10%;
+      object-fit: cover;
+      border: 1px solid black;
+    }
+  }
+
+  .card_load_extreme_title {
+    width: 90px;
+    height: 10px;
+    position: relative;
+    float: right;
+    border-radius: 5px;
+
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+
+  .card_load_extreme_descripion {
+    width: 90px;
+    height: 47px;
+    position: relative;
+    float: right;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+}
+
+@keyframes load89234 {
+  100% {
+    background-position: -100% 0;
+  }
+}
