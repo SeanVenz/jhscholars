@@ -42,7 +42,7 @@ function ScholarForm() {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <h4 className="title" style={{ margin: "0px" }}>Register</h4>
-      <p className="message">Signup now and join our ranks!</p>
+      <p className="message">Sign Up now and join our ranks!</p>
 
       <label>
         <input
