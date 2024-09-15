@@ -12,12 +12,18 @@ import aboutussneak from '../images/aboutussneakpeek.png'
 import scholarsneak from '../images/scholarssneak.png'
 import joinussneak from '../images/joinussneak.png'
 
+import bg1 from '../images/bg1.png'
+import bg2 from '../images/bg2.png'
+import bg3 from '../images/bg3.jpg'
+import bg4 from '../images/bg4.jpg'
+import bg5 from '../images/bg5.jpg'
+
 const topScholars = [
-    {name: "Yurii5", gp: "683", axieLevel: "35", place: "1st place last season", reward: 100, link: scholar1},
-    {name: "joncel14", gp: "622", axieLevel: "29", place: "2nd place last season", reward: 75, link: scholar2},
-    {name: "AHL", gp: "526", axieLevel: "20", place: "3rd place last season", reward: 50, link: scholar3},
-    {name: "heliumlubis", gp: "515", axieLevel: "28", place: "4th place last season", reward: 30, link: scholar4},
-    {name: "sharonmaetorres", gp: "474", axieLevel: "15", place: "5th place last season", reward: 25, link: scholar5},
+    {name: "Yurii5", gp: "683", axieLevel: "35", place: "1st place last season", reward: 100, link: scholar1, bg: bg1},
+    {name: "joncel14", gp: "622", axieLevel: "29", place: "2nd place last season", reward: 75, link: scholar2, bg: bg2},
+    {name: "AHL", gp: "526", axieLevel: "20", place: "3rd place last season", reward: 50, link: scholar3, bg: bg1},
+    {name: "heliumlubis", gp: "515", axieLevel: "28", place: "4th place last season", reward: 30, link: scholar4, bg: bg3},
+    {name: "sharonmaetorres", gp: "474", axieLevel: "15", place: "5th place last season", reward: 25, link: scholar5, bg: bg4},
 ];
 
 const rewards = [

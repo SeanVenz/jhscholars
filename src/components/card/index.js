@@ -23,7 +23,7 @@ function Card({ scholar }) {
 
   return (
     <div className="card">
-      <div className="image_container">
+      <div className="image_container" style={{backgroundImage: `url(${scholar.bg})`, backgroundSize: "cover"}}>
         {isLoading && <div className="spinner"></div>}
         <img
           src={scholar.link}

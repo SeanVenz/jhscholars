@@ -5,7 +5,7 @@ import aboutussneakpeek from "../../images/aboutussneakpeek.png";
 import schlarssneak from "../../images/scholarssneak.png";
 import "./index.scss";
 import { homeCardDetails } from "../../data/scholars";
-import BIRDS from "vanta/dist/vanta.net.min";
+import HALO from "vanta/dist/vanta.halo.min.js";
 import * as THREE from "three";
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
   useEffect(() => {
     if (!vantaEffect && vantaRef.current) {
       setVantaEffect(
-        BIRDS({
+        HALO({
           el: vantaRef.current,
           THREE: THREE,
           mouseControls: true,

@@ -1,14 +1,45 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { rewards } from "../../data/scholars";
 import Navbar from "../../components/navbar";
 import "./index.scss";
 import RewardList from "../../components/reward";
 import Button from "../../components/button";
+import GLOBE from "vanta/dist/vanta.globe.min.js";
+import * as THREE from "three";
 
 function AboutUs() {
+  const navigate = useNavigate();
+  const [vantaEffect, setVantaEffect] = useState(null);
+  const vantaRef = useRef(null);
+
+  useEffect(() => {
+    if (!vantaEffect && vantaRef.current) {
+      setVantaEffect(
+        GLOBE({
+          el: vantaRef.current,
+          THREE: THREE,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          backgroundColor: 0x0,
+          points: 5.0,
+        })
+      );
+    }
+    return () => {
+      if (vantaEffect) {
+        vantaEffect.destroy();
+        setVantaEffect(null); // Clear effect reference
+      }
+    };
+  }, [vantaEffect]);
   return (
-    <div className="about-us">
+    <div className="about-us" ref={vantaRef}>
       <Navbar />
       <div className="content">
         <h3>Welcome to the JH Community Guild!</h3>
