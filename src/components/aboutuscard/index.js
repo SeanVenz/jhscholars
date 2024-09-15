@@ -6,7 +6,6 @@ function AboutUsCard({ name, role, img }) {
   return (
     <div class="aboutus_card">
       <div class="card_load">
-        <img className="logo" src={jhlogo} alt="Logo" />
         <img src={img} alt={name} />
       </div>
       <div className="info">
