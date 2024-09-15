@@ -7,7 +7,7 @@ function MyCard() {
     <div className="card-holder">
       {topScholars.map((scholar, index) => (
         <ul>
-        <Card key={index} scholar={scholar} />
+          <Card key={index} scholar={scholar} />
         </ul>
       ))}
     </div>
@@ -23,13 +23,19 @@ function Card({ scholar }) {
 
   return (
     <div className="card">
-      <div className="image_container" style={{backgroundImage: `url(${scholar.bg})`, backgroundSize: "cover"}}>
+      <div
+        className="image_container"
+        style={{
+          backgroundImage: `url(${scholar.bg})`,
+          backgroundSize: "cover",
+        }}
+      >
         {isLoading && <div className="spinner"></div>}
         <img
           src={scholar.link}
           alt={scholar.name}
           onLoad={handleImageLoad}
-          style={{ display: isLoading ? 'none' : 'block' }}
+          style={{ display: isLoading ? "none" : "block" }}
         />
       </div>
       <div className="title">

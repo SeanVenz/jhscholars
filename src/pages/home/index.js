@@ -29,7 +29,7 @@ function Home() {
     return () => {
       if (vantaEffect) {
         vantaEffect.destroy();
-        setVantaEffect(null); 
+        setVantaEffect(null);
       }
     };
   }, [vantaEffect]);
@@ -38,7 +38,7 @@ function Home() {
     setZoomedImage(index);
     setTimeout(() => {
       navigate(link);
-    }, 1000); 
+    }, 1000);
   };
 
   return (
@@ -54,21 +54,21 @@ function Home() {
       <div className="navigation">
         {homeCardDetails.map((detail, index) => (
           <ul>
-          <div className="card" key={index}>
-            <img
-              src={detail.sneak}
-              alt="sneak peek"
-              className={`sneak ${zoomedImage === index ? "zoom" : ""}`}
-            />
-            <img
-              src={detail.image}
-              alt={detail.alt}
-              className={`card-image-link ${
-                zoomedImage === index ? "hidden" : ""
-              }`}
-              onClick={() => handleImageClick(detail.link, index)}
-            />
-          </div>
+            <div className="card" key={index}>
+              <img
+                src={detail.sneak}
+                alt="sneak peek"
+                className={`sneak ${zoomedImage === index ? "zoom" : ""}`}
+              />
+              <img
+                src={detail.image}
+                alt={detail.alt}
+                className={`card-image-link ${
+                  zoomedImage === index ? "hidden" : ""
+                }`}
+                onClick={() => handleImageClick(detail.link, index)}
+              />
+            </div>
           </ul>
         ))}
       </div>

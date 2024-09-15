@@ -24,7 +24,7 @@ function ScholarForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setErrorMessage(""); 
+    setErrorMessage("");
 
     setTimeout(() => {
       try {
@@ -41,7 +41,9 @@ function ScholarForm() {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h4 className="title" style={{ margin: "0px" }}>Register</h4>
+      <h4 className="title" style={{ margin: "0px" }}>
+        Register
+      </h4>
       <p className="message">Sign Up now and join our ranks!</p>
 
       <label>

@@ -5,7 +5,7 @@
   justify-content: center;
 
   .card {
-    --bg-card: #FFF5CC;
+    --bg-card: #fff5cc;
     --primary: #6d28d9;
     --primary-800: #4c1d95;
     --primary-shadow: #2e1065;
@@ -171,12 +171,11 @@
   }
 }
 
-
 @media only screen and (min-width: 768px) and (max-width: 1303px) {
-  .card-holder{
+  .card-holder {
     padding-left: 2%;
     padding-right: 2%;
-    .card{
+    .card {
       width: 22rem;
       height: 28rem;
     }
@@ -184,21 +183,21 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .card-holder{
+  .card-holder {
     padding-left: 2%;
     padding-right: 2%;
-    ul{
+    ul {
       padding-left: 0 !important;
     }
-    .card{
+    .card {
       width: 15rem;
       height: 20rem;
 
-      .image_container{
+      .image_container {
         height: 400px;
       }
 
-      span{
+      span {
         font-size: 1rem;
       }
       .image_container {

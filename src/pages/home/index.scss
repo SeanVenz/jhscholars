@@ -6,10 +6,10 @@
   display: flex;
   flex-direction: column;
 
-  h1{
-    text-align:  center;
+  h1 {
+    text-align: center;
     color: white;
-    font-family: 'MainFont';
+    font-family: "MainFont";
     font-size: 4rem;
     letter-spacing: 5px;
   }
@@ -17,8 +17,8 @@
   p {
     text-align: center;
     font-size: 1.5rem;
-    color:white;
-    font-family: 'SecondaryFont';
+    color: white;
+    font-family: "SecondaryFont";
     letter-spacing: 2px;
   }
 
@@ -118,60 +118,60 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1303px){
-  .home{
+@media only screen and (min-width: 768px) and (max-width: 1303px) {
+  .home {
     height: 100%;
 
-    .navigation{
-      .card{
+    .navigation {
+      .card {
         height: 20rem;
         width: 20rem;
       }
     }
 
-    h1{
+    h1 {
       padding-top: 3%;
       padding-left: 2%;
       padding-right: 2%;
     }
 
-    p{
+    p {
       padding-left: 2%;
       padding-right: 2%;
     }
   }
 }
 
-@media only screen and (max-width: 767px){
-  .home{
+@media only screen and (max-width: 767px) {
+  .home {
     height: 100%;
 
-    ul{
+    ul {
       padding-left: 0 !important;
     }
-    .navigation{
-      .card{
+    .navigation {
+      .card {
         height: 15rem;
         width: 15rem;
       }
     }
 
-    .logo-holder{
+    .logo-holder {
       height: 80px;
-      img{
+      img {
         object-fit: cover;
         height: 100%;
       }
     }
 
-    h1{
+    h1 {
       padding-top: 3%;
       padding-left: 2%;
       padding-right: 2%;
       font-size: 2rem;
     }
 
-    p{
+    p {
       padding-left: 2%;
       padding-right: 2%;
     }

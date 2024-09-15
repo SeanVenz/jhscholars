@@ -51,16 +51,13 @@ function JoinUs() {
               <h4>Start Competing:</h4>
 
               <p>
-                Gain Guild Points by playing in our weekly tournaments
-                and events.
+                Gain Guild Points by playing in our weekly tournaments and
+                events.
               </p>
 
               <h4>Earn Rewards:</h4>
 
-              <p>
-                The more points you earn, the more rewards you
-                can unlock!
-              </p>
+              <p>The more points you earn, the more rewards you can unlock!</p>
             </div>
             <div className="right-info">
               <ScholarForm />
