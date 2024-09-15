@@ -115,6 +115,13 @@
       gap: 5px;
     }
 
+    .right-info{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
     .info{
       flex-direction: column;
     }
