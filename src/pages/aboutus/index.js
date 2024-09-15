@@ -32,7 +32,7 @@ function AboutUs() {
     return () => {
       if (vantaEffect) {
         vantaEffect.destroy();
-        setVantaEffect(null); // Clear effect reference
+        setVantaEffect(null);
       }
     };
   }, [vantaEffect]);

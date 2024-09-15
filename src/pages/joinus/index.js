@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import ScholarForm from "../../components/form";
 import Navbar from "../../components/navbar";
 import "./index.scss";
-import RINGS from "vanta/dist/vanta.rings.min.js";
+import CELLS from "vanta/dist/vanta.cells.min.js";
 import * as THREE from "three";
 
 function JoinUs() {
@@ -12,7 +12,7 @@ function JoinUs() {
   useEffect(() => {
     if (!vantaEffect && vantaRef.current) {
       setVantaEffect(
-        RINGS({
+        CELLS({
           el: vantaRef.current,
           THREE: THREE,
           mouseControls: true,
@@ -24,6 +24,7 @@ function JoinUs() {
           scaleMobile: 1.0,
           backgroundColor: 0x0,
           points: 5.0,
+          spacing: 10
         })
       );
     }
@@ -36,7 +37,7 @@ function JoinUs() {
   }, [vantaEffect]);
   return (
     <>
-      <div className="join">
+      <div className="join" ref={vantaRef}>
         <Navbar></Navbar>
         <div className="content">
           <div className="traveling-dot"></div>

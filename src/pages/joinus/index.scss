@@ -16,44 +16,11 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    border: 4px solid #0047ab; /* Border to emphasize the traveling dot */
+    border: 4px solid #0047ab;
+    opacity: 0.95;
   }
 
-  /* Dot that travels in the middle of the border */
-  .traveling-dot {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #0047ab; /* Blue dot color */
-    border-radius: 50%;
-    animation: travel-around 8s linear infinite;
-    /* Move the dot to be centered on the border */
-    transform: translate(-50%, -50%);
-  }
-
-  /* Animation for traveling in the middle of the border */
-  @keyframes travel-around {
-    0% {
-      top: 0;
-      left: 50%;
-    }
-    25% {
-      top: 50%;
-      left: 100%;
-    }
-    50% {
-      top: 100%;
-      left: 50%;
-    }
-    75% {
-      top: 50%;
-      left: 0;
-    }
-    100% {
-      top: 0;
-      left: 50%;
-    }
-  }
+  
 
   h2 {
     text-align: center;
